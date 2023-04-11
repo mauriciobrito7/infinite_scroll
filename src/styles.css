@@ -1,0 +1,152 @@
+@font-face {
+ font-family: 'Recoleta Alt';
+ src: url('./fonts/RecoletaAlt-Regular.woff2') format('woff2');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: 'Hellix';
+ src: url('./fonts/Hellix-SemiBold.ttf') format('ttf');
+ font-weight: medium;
+ font-style: medium;
+}
+
+:root {
+ --black: #000;
+ --white: #fff;
+ --primary-color: #5E35F2;
+ --primary-light-color: #6F48FF;
+ --secondary-color: #E4CEF2;
+ --neutral-color: #C8C8C8;
+ --neutral-black: #212121;
+ --linear-gradient-primary-secondary: linear-gradient(90deg, var(--primary-color) 6%, var(--primary-light-color) 72%);
+ --linear-gradient-white-secondary: linear-gradient(90deg, var(--white) 2%, var(--secondary-color) 38%);
+ font-size: 16px;
+ --font-text: 'Recoleta Alt', sans-serif;
+ --font-title: 'Hellix', sans-serif;
+}
+
+
+html {
+ box-sizing: border-box;
+ -ms-text-size-ajust: 100%;
+ -moz-text-size-adjust: 100%;
+ -webkit-text-size-adjust: 100%;
+}
+
+body {
+ overflow-x: hidden;
+ background: var(--black);
+ color: var(--white);
+ font-family: var(--font-text);
+}
+
+*,
+*::after,
+*::before {
+ box-sizing: inherit;
+ margin: 0;
+ padding: 0;
+}
+
+h1,
+h2,
+h3 {
+ text-transform: uppercase;
+ line-height: 1.2em;
+ font-family: var(--font-title);
+}
+
+h1 {
+ font-size: 48px;
+}
+
+h2 {
+ font-size: 32px;
+}
+
+h3 {
+ font-size: 23px;
+}
+
+img,
+audio,
+canvas,
+iframe,
+picture,
+progress,
+svg {
+ display: inline-block;
+ width: 100%;
+ max-width: 100%;
+ vertical-align: baseline;
+ height: auto;
+}
+
+ul {
+ list-style: none;
+}
+
+li {
+ margin-left: 1em;
+ list-style-type: inherit;
+ list-style-position: inside;
+}
+
+label,
+input,
+textarea,
+article,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+ display: block;
+}
+
+b,
+strong {
+ font-weight: bold;
+}
+
+button {
+ height: 2.5rem;
+ width: auto;
+ border: 0;
+ border-radius: 4rem;
+ padding: 0 2rem;
+ cursor: pointer;
+ text-transform: uppercase;
+ font-family: var(--font-title);
+}
+
+button.primary {
+ background: var(--primary-color);
+ color: var(--white);
+}
+
+button.primary:hover {
+ background: var(--linear-gradient-primary-secondary);
+}
+
+button.secondary {
+ background: var(--white);
+ color: var(--black);
+}
+
+button.secondary:hover {
+ background: var(--linear-gradient-white-secondary);
+}
+
+p {
+ font-size: 1rem;
+ line-height: 1.3em;
+ font-weight: 400;
+}
